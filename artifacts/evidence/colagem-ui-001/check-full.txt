@@ -1,0 +1,48 @@
+
+ RUN  v5.0.5 C:/estudo/Golpe/lab/projects/p08
+
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+
+ Test Files  2 passed (2)
+      Tests  36 passed (36)
+   Start at  13:22:21
+   Duration  3.55s (environment 63%, tests 18%, setup 12%, import 5%, transform 1%)
+
+lint: exit 0
+typecheck: exit 0
+test: exit 0
+check-fast: OK
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 5 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/style.css  10.99 kB │ gzip: 3.11 kB
+dist/index.js   15.18 kB │ gzip: 4.59 kB
+
+[32m✓ built in 63ms[39m
+budget: PASS (4.5 KB gzip of 40 KB)
+
+Running 7 tests using 1 worker
+
+  ✓  1 e2e\gallery.spec.ts:10:5 › gallery breu 1000px: axe with contrast, no overflow, no console errors (1.3s)
+  ✓  2 e2e\gallery.spec.ts:10:5 › gallery breu 360px: axe with contrast, no overflow, no console errors (1.1s)
+  ✓  3 e2e\gallery.spec.ts:10:5 › gallery papel 1000px: axe with contrast, no overflow, no console errors (1.1s)
+  ✓  4 e2e\gallery.spec.ts:10:5 › gallery papel 360px: axe with contrast, no overflow, no console errors (1.1s)
+  ✓  5 e2e\gallery.spec.ts:32:1 › reduced motion stops the band and the focus-card shake (253ms)
+  ✓  6 e2e\gallery.spec.ts:40:1 › background mode 2d is chosen without WebGL2, and the page still renders (303ms)
+  ✓  7 e2e\gallery.spec.ts:52:1 › squint screenshot (DS-006 evidence, judged by the owner) (528ms)
+
+  7 passed (9.3s)
+pack: colagem-ui-0.1.0.tgz sha256=d70227b9261ffc4d7132e08ebed961d394fe74dbcb5b9e98d796850a6af8ef29 commit=036c41b8dc915635c26a51bb3278be5060501b54 (dirty tree)
+(node:32628) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+fast: exit 0
+build: exit 0
+budget: exit 0
+e2e: exit 0
+pack: exit 0
+check-full: PASS

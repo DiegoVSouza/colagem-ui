@@ -1,0 +1,104 @@
+/* Colagem Urbana Noite: the only file allowed to contain a color value (DS-001).
+   Source: DESIGN_SYSTEM_COLAGEM_URBANA_NOITE.md section 4. */
+
+:root,
+[data-theme="breu"] {
+  /* Neutrals [v5] */
+  --ink: #050505;
+  --card: #0c0c0c;
+  --ink-2: #111111;
+  --paper: #f2ede4;
+  --mut: #cfc9be;
+  --paper-ink: #1c1c1c;
+  --white: #ffffff;
+
+  /* Page surfaces */
+  --page: var(--ink);
+  --on-page: var(--paper);
+  --page-mut: var(--mut);
+
+  /* Accent, three levels (section 4.2), preset vermelho */
+  --red: #e5121f;
+  --red-text: #ff4a52;
+  --dred: #6d0a12;
+  --on-red: #ffffff;
+
+  --fog: var(--ink);
+
+  /* Feedback: always with glyph and text, never color alone */
+  --ok: #5fd38d;
+  --warn: #ffb340;
+  --err: #ff4a52;
+
+  /* Cut-out letter kits (plate only) */
+  --k0-bg: var(--paper);
+  --k0-fg: var(--ink);
+  --k1-bg: var(--red);
+  --k1-fg: var(--white);
+  --k2-bg: var(--ink);
+  --k2-fg: var(--paper);
+}
+
+[data-theme="papel"] {
+  --page: var(--paper);
+  --on-page: var(--ink);
+  --page-mut: var(--paper-ink);
+  --red-text: #c8101b;
+  --ok: #1f7a3a;
+  --warn: #b34700;
+  --err: #c8101b;
+}
+
+/* Accent presets (section 4.3): only these four values change */
+[data-accent="rosa"] { --red: #e6008a; --red-text: #ff2fa3; --dred: #6b0045; --on-red: #050505; }
+[data-accent="laranja"] { --red: #ff7a1a; --red-text: #ff7a1a; --dred: #7a3a0a; --on-red: #050505; }
+[data-accent="azul"] { --red: #0057ff; --red-text: #5c8cff; --dred: #002a73; --on-red: #ffffff; }
+
+:root {
+  /* Typography (4.5) */
+  --f-display: "Anton", Impact, sans-serif;
+  --f-body: "Courier Prime", ui-monospace, monospace;
+  --f-serif: "Playfair Display", Georgia, serif;
+  --f-type: "Special Elite", "Courier New", monospace;
+
+  /* Shape (4.6) */
+  --cut-card: polygon(0 3%, 6% 0, 34% 2%, 66% 0, 100% 3%, 99% 50%, 100% 97%, 68% 100%, 36% 98%, 4% 100%, 0 55%);
+  --tilt-odd: -1.2deg;
+  --tilt-even: 1deg;
+  --shadow-rest: 8px;
+  --shadow-focus: 9px;
+  --border: 2px solid var(--paper);
+  --border-strong: 3px solid var(--paper);
+  --ring: 0 0 0 2px var(--paper);
+  --text-shadow: 3px 3px 0 var(--ink);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --gutter: clamp(14px, 4vw, 36px);
+  --hit: 44px;
+  --hit-main: 48px;
+  --focus: 3px solid var(--paper);
+
+  /* z-index (4.7) */
+  --z-bg: 0;
+  --z-content: 2;
+  --z-wipe: 12;
+  --z-hud: 13;
+  --z-header: 14;
+  --z-modal: 50;
+  --z-toast: 60;
+
+  /* Motion (4.8) */
+  --ease-cut: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+[data-theme="papel"] {
+  --focus: 3px solid var(--ink);
+  --border: 2px solid var(--ink);
+  --border-strong: 3px solid var(--ink);
+}

@@ -1,0 +1,71 @@
+{
+  "name": "colagem-ui",
+  "version": "0.1.0",
+  "description": "Colagem Urbana Noite design system: tokens and React components (levels 0 and 1)",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "src/tokens.css",
+    "src/fonts.css",
+    "src/plate-fonts.css"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./tokens.css": "./src/tokens.css",
+    "./plate-fonts.css": "./src/plate-fonts.css",
+    "./fonts.css": "./src/fonts.css"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "gallery": "vite --config vite.gallery.config.ts",
+    "gallery:build": "vite build --config vite.gallery.config.ts",
+    "gallery:preview": "vite preview --config vite.gallery.config.ts --port 44174 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src gallery e2e scripts",
+    "test": "vitest run",
+    "budget": "node scripts/budget.mjs",
+    "pack:tgz": "node scripts/pack.mjs",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.3.0",
+    "@fontsource/courier-prime": "5.3.0",
+    "@fontsource/playfair-display": "5.3.0",
+    "@fontsource/special-elite": "5.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.8",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "axe-core": "4.14.0",
+    "eslint": "10.14.0",
+    "jsdom": "29.1.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}
