@@ -3,6 +3,6 @@
   "version": "0.2.0",
   "file": "artifacts/packages/colagem-ui-0.2.0.tgz",
   "sha256": "293a5514bac35e957d683008a6dc08b63dbae1919bfc6fa5cea34b9a8e988d40",
-  "commit": "607700eabe71f6df2ed74a8fdd548aa808a2ecc3",
-  "dirty": true
+  "commit": "151ca868540f0ed27c8a05d1e278b32c0d4cdcc5",
+  "dirty": false
 }
