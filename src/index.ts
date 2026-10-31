@@ -5,3 +5,4 @@ export { FlowDiagram, FlowList, flowOrder, samplePath, type FlowDiagramProps, ty
 export { flowToMermaid } from "./mermaid";
 export { wrapLabel, nodeSize } from "./flow-text";
 export * from "./flow-types";
+export * from "./blocks";

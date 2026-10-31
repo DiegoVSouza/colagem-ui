@@ -207,3 +207,42 @@ main, .foot, .top { position: relative; z-index: var(--z-content); }
 .flow-list { padding-left: var(--space-5); max-width: 70ch; }
 .flow-list li { margin: var(--space-2) 0; }
 @media (prefers-reduced-motion: reduce) { .flow-token { display: none; } }
+
+/* ---- content blocks (0.4.0) ---- */
+.trio { display: flex; flex-wrap: wrap; gap: var(--space-3); list-style: none; padding: 0; margin: var(--space-4) 0; }
+.trio a, .trio-off { display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--hit-main); padding: 0 var(--space-4); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.trio a { background: var(--red); color: var(--on-red); text-decoration: none; border: 3px solid var(--red); }
+.trio-off { border: var(--border); border-style: dashed; color: var(--paper); background: var(--ink); }
+.trio-why { font-size: 12px; color: var(--mut); }
+.metric caption, .runlog caption { text-align: left; }
+.runlog-empty { padding: var(--space-4); background: var(--ink); border-left: 8px solid var(--red); max-width: 60ch; }
+.stepper { list-style: none; margin: var(--space-4) 0; padding: 0; display: grid; gap: var(--space-2); }
+.stepper li { color: var(--paper); background: var(--card); border-left: 8px solid var(--page-mut); padding: var(--space-2) var(--space-3); }
+.stepper li.now { background: var(--paper); color: var(--ink); border-left-color: var(--red); }
+.stepper li.done { border-left-color: var(--ok); }
+.step-btn { display: block; width: 100%; min-height: var(--hit); text-align: left; background: transparent; color: inherit; border: 0; font: 700 15px/1.4 var(--f-body); padding: var(--space-2) 0; cursor: pointer; }
+.step-n { font-family: var(--f-display); font-size: 20px; margin-right: var(--space-2); }
+.step-body { padding: var(--space-2) 0 var(--space-3); }
+.timeline { list-style: none; padding: 0 0 0 var(--space-4); margin: var(--space-4) 0; border-left: 4px solid var(--red); display: grid; gap: var(--space-5); }
+.tl-when { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--page-mut); }
+.tl-title { font-size: 24px; margin: var(--space-1) 0; }
+.decision, .failure { background: var(--card); color: var(--paper); border: var(--border-strong); padding: var(--space-4) var(--space-5); margin: var(--space-4) 0; max-width: 72ch; }
+.decision h3 { font-size: 24px; margin-bottom: var(--space-2); }
+.rejected { border-top: 2px dashed var(--page-mut); padding-top: var(--space-2); margin-bottom: 0; }
+.failure dl { margin: 0; display: grid; gap: var(--space-1); }
+.failure dt { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mut); margin-top: var(--space-2); }
+.failure dd { margin: 0; }
+.sideindex { position: fixed; left: var(--gutter); top: 50%; transform: translateY(-50%); z-index: var(--z-hud); background: var(--ink); border-left: 4px solid var(--red); padding: var(--space-2) var(--space-3); max-width: 190px; }
+.sideindex ol { list-style: none; margin: 0; padding: 0; }
+.sideindex a { display: block; color: var(--paper); font-size: 13px; text-decoration: none; padding: var(--space-1) 0; min-height: 28px; }
+.sideindex a[aria-current="page"] { background: var(--red); color: var(--on-red); font-weight: 700; padding-inline: var(--space-1); }
+.si-n { font-family: var(--f-display); margin-right: var(--space-1); }
+@media (max-width: 899px) { .sideindex { display: none; } }
+.hud { position: fixed; right: var(--gutter); top: 72px; z-index: var(--z-hud); background: var(--ink); color: var(--paper); border: var(--border); padding: var(--space-1) var(--space-3); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; pointer-events: none; }
+.tablist { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-3); }
+.tab { min-height: var(--hit); padding: 0 var(--space-4); font: 700 13px/1 var(--f-body); text-transform: uppercase; letter-spacing: 0.08em; background: var(--ink); color: var(--paper); border: var(--border); cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--red); border-color: var(--red); color: var(--on-red); }
+.tabpanel { color: var(--paper); background: var(--card); border: var(--border-strong); padding: var(--space-4); }
+
+/* Links on dark surfaces keep paper text in both themes (the papel red-text is only for light surfaces). */
+.dt a, .decision a, .failure a, .tabpanel a, .runlog-empty a, .flow-caption a, .stepper a { color: var(--paper); }

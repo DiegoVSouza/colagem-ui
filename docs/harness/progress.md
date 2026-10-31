@@ -10,3 +10,4 @@
 - 2026-10-31 0.3.0: Headline focusOnMount. Exit 0, 40 tests.
 
 - 2026-10-31 0.4.0: FlowDiagram, FlowList, flowToMermaid and the build-time layoutFlow (`colagem-ui/layout`, ELK). 55 tests, 8.1 KB gzip of 40 KB. Real Chrome found one defect, fixed: wrapped SVG labels lost their spaces and failed `label-content-name-mismatch`. `check_full.py` exit 0. Evidence: `artifacts/evidence/colagem-ui-040/check-full.txt`.
+- 2026-10-31 0.4.0 blocks: LinkTrio, MetricTable, RunLog, Stepper, Timeline, DecisionCard, FailureCard, SideIndex, Hud, Tabs. 62 unit tests. Real Chrome found four contrast defects on dark surfaces in the papel theme (links, stepper, tab panel, side index), all fixed. `check_full.py` exit 0.

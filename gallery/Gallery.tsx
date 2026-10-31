@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   AppFooter, AppHeader, Band, Button, Card, Command, DataTable, EmptyState, Field, GhostNumber, Headline, Lead,
   Layers, Modal, Panel, Plate, Progress, SelectField, SkipLink, StatusSeal, Toast, Toggle, WakeNotice, useBackgroundMode,
-  FlowDiagram,
+  FlowDiagram, LinkTrio, MetricTable, RunLog, Stepper, Timeline, DecisionCard, FailureCard, Tabs, SideIndex,
 } from "../src";
 import { sampleFlow, sampleLabels, sampleLayout } from "./sample-flow";
 
@@ -50,6 +50,16 @@ export function Gallery({ theme = "breu" }: { theme?: "breu" | "papel" }) {
         ]} />
         <h2>Flow diagram</h2>
         <FlowDiagram flow={sampleFlow} layout={sampleLayout} lang="en" labels={sampleLabels} links={{ code: (p) => `#${p}`, docs: (p) => `#${p}` }} />
+        <h2>Blocks</h2>
+        <LinkTrio label="Case links" links={[{ label: "Live demo", href: "#demo" }, { label: "Code", href: "#code" }, { label: "Docs" }]} />
+        <MetricTable caption="Measured" labels={{ metric: "Metric", value: "Value", mode: "Mode", source: "Source" }} rows={[{ id: "m1", label: "Trials passed", value: "27 of 36", mode: "live", source: <a href="#ev">evidence</a>, caveat: "development set, not held out" }]} />
+        <RunLog caption="Run" steps={[{ id: "1", agent: "classifier", project: "P05", model: "openai/gpt-oss-20b", latencyMs: 412, tokens: 960, costUsd: 0.000086 }]} labels={{ step: "Step", project: "Project", model: "Model", latency: "Latency", tokens: "Tokens", cost: "Cost", empty: "No run yet" }} />
+        <Stepper label="Tour" current={1} steps={[{ id: "a", title: "Create ticket" }, { id: "b", title: "Run triage", body: <p>The real model answers.</p> }, { id: "c", title: "Approve" }]} />
+        <Timeline items={[{ id: "t1", when: "2024", title: "Paper", body: <p>Peer reviewed.</p> }]} />
+        <DecisionCard title="Dual control" body={<p>The requester cannot approve.</p>} rejected="One-click approval." link={{ href: "#code", text: "Code" }} labels={{ rejected: "Rejected:" }} />
+        <FailureCard what="A tour step stalled." cause="Cold machine." change="Wake notice added." labels={{ what: "What", cause: "Cause", change: "Change" }} />
+        <Tabs label="Language" tabs={[{ id: "en", label: "EN", panel: <p>English text</p> }, { id: "pt", label: "PT", panel: <p>Texto</p> }]} />
+        <SideIndex label="Projects" items={[{ id: "a", label: "SupportOps", href: "#a", active: true }, { id: "b", label: "Foundation", href: "#b" }]} />
         <h2>Feedback</h2>
         <Progress value={40} label="Upload" />
         <WakeNotice service="P05" elapsed={7} expected={20} onRetry={() => undefined} labels={{ waking: (s, e, x) => `Waking ${s}: ${e}s of about ${x}s`, failed: (s) => `${s} did not answer`, retry: "Retry" }} />

@@ -6,10 +6,10 @@ Not implemented: HTMLCanvasElement's getContext() method: without installing the
 Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
 Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
 
- Test Files  4 passed (4)
-      Tests  55 passed (55)
-   Start at  16:45:46
-   Duration  9.42s (environment 69%, tests 13%, setup 10%, import 6%, transform 1%)
+ Test Files  5 passed (5)
+      Tests  62 passed (62)
+   Start at  16:55:42
+   Duration  15.27s (environment 77%, tests 9%, setup 7%, import 4%, transform 2%)
 
 lint: exit 0
 typecheck: exit 0
@@ -17,30 +17,30 @@ test: exit 0
 check-fast: OK
 [36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
 transforming...
-✓ 10 modules transformed.
+✓ 11 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/style.css              14.48 kB │ gzip: 3.72 kB
+dist/style.css              18.10 kB │ gzip: 4.32 kB
 dist/flow-text-Lh7b2TQk.js   0.46 kB │ gzip: 0.30 kB
 dist/layout.js               1.51 kB │ gzip: 0.79 kB
-dist/index.js               27.27 kB │ gzip: 8.07 kB
+dist/index.js               35.10 kB │ gzip: 9.41 kB
 
-[32m✓ built in 147ms[39m
-budget: PASS (8.1 KB gzip of 40 KB)
+[32m✓ built in 110ms[39m
+budget: PASS (9.5 KB gzip of 40 KB)
 
 Running 7 tests using 1 worker
 
-  ✓  1 e2e\gallery.spec.ts:10:5 › gallery breu 1000px: axe with contrast, no overflow, no console errors (2.4s)
-  ✓  2 e2e\gallery.spec.ts:10:5 › gallery breu 360px: axe with contrast, no overflow, no console errors (2.5s)
-  ✓  3 e2e\gallery.spec.ts:10:5 › gallery papel 1000px: axe with contrast, no overflow, no console errors (3.7s)
-  ✓  4 e2e\gallery.spec.ts:10:5 › gallery papel 360px: axe with contrast, no overflow, no console errors (2.8s)
-  ✓  5 e2e\gallery.spec.ts:32:1 › reduced motion stops the band and the focus-card shake (618ms)
-  ✓  6 e2e\gallery.spec.ts:40:1 › background mode 2d is chosen without WebGL2, and the page still renders (571ms)
-  ✓  7 e2e\gallery.spec.ts:52:1 › squint screenshot (DS-006 evidence, judged by the owner) (891ms)
+  ✓  1 e2e\gallery.spec.ts:10:5 › gallery breu 1000px: axe with contrast, no overflow, no console errors (2.8s)
+  ✓  2 e2e\gallery.spec.ts:10:5 › gallery breu 360px: axe with contrast, no overflow, no console errors (2.4s)
+  ✓  3 e2e\gallery.spec.ts:10:5 › gallery papel 1000px: axe with contrast, no overflow, no console errors (3.0s)
+  ✓  4 e2e\gallery.spec.ts:10:5 › gallery papel 360px: axe with contrast, no overflow, no console errors (3.9s)
+  ✓  5 e2e\gallery.spec.ts:32:1 › reduced motion stops the band and the focus-card shake (921ms)
+  ✓  6 e2e\gallery.spec.ts:40:1 › background mode 2d is chosen without WebGL2, and the page still renders (773ms)
+  ✓  7 e2e\gallery.spec.ts:52:1 › squint screenshot (DS-006 evidence, judged by the owner) (950ms)
 
-  7 passed (20.6s)
-pack: colagem-ui-0.4.0.tgz sha256=1da0edf60fe4124da78b2772ccea6356acaffd8a47b611063e1b8b1f7db8b789 commit=b010779dba73bd16d381eaa2a62646cad2211c76 (dirty tree)
-(node:3668) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+  7 passed (22.1s)
+pack: colagem-ui-0.4.0.tgz sha256=6b4e29135ad0524b9405f8825b2818459f76ad9f082c61e13fe47b14f252263f commit=6aba17e4c00e1d85dbe300194802da4f06bfee44 (dirty tree)
+(node:4180) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 fast: exit 0
 build: exit 0
