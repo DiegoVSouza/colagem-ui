@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   AppFooter, AppHeader, Band, Button, Card, Command, DataTable, EmptyState, Field, GhostNumber, Headline, Lead,
-  Layers, Modal, Plate, Progress, SkipLink, StatusSeal, Toast, Toggle, WakeNotice, useBackgroundMode,
+  Layers, Modal, Panel, Plate, Progress, SelectField, SkipLink, StatusSeal, Toast, Toggle, WakeNotice, useBackgroundMode,
 } from "../src";
 
 const rows = [
@@ -18,7 +18,7 @@ export function Gallery({ theme = "breu" }: { theme?: "breu" | "papel" }) {
     <div data-theme={theme} className="page">
       <Layers ghost="01" />
       <SkipLink>Skip to content</SkipLink>
-      <AppHeader brand="Colagem UI" navLabel="Sections" nav={<><a href="#cards">Cards</a><a href="#forms">Forms</a></>}>
+      <AppHeader brand={<Plate text="SUPPORTOPS" size="logo" />} navLabel="Sections" nav={<><a href="#cards">Cards</a><a href="#forms">Forms</a></>}>
         <Toggle pressed={pressed} onChange={setPressed}>motion: {pressed ? "off" : "on"}</Toggle>
       </AppHeader>
       <main id="main" className="wrap" tabIndex={-1}>
@@ -36,6 +36,11 @@ export function Gallery({ theme = "breu" }: { theme?: "breu" | "papel" }) {
         <Field label="Description" multiline />
         <Button>Primary</Button> <Button variant="secondary">Secondary</Button> <Button variant="danger">Reject</Button>{" "}
         <Button disabled disabledReason="You cannot approve your own refund">Approve</Button>
+        <Panel as="form" title="Task panel" onSubmit={(e) => e.preventDefault()}>
+          <SelectField label="Rating" defaultValue="5"><option value="5">5</option><option value="4">4</option></SelectField>
+          <Field label="Comment" hint="Optional" />
+          <Button size="sm" variant="secondary">Send</Button>
+        </Panel>
         <h2>Data</h2>
         <DataTable caption="Projects" rowKey={(r) => r.id} rows={rows} columns={[
           { key: "name", label: "Project", render: (r) => r.name },

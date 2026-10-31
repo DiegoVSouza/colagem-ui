@@ -1,6 +1,6 @@
 import {
   useCallback, useEffect, useId, useRef, useState,
-  type ButtonHTMLAttributes, type CSSProperties, type InputHTMLAttributes, type ReactNode,
+  type ButtonHTMLAttributes, type CSSProperties, type FormHTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes,
 } from "react";
 
 /** Status glyphs (DS-003): the glyph and the word travel together, never color alone. */
@@ -89,7 +89,7 @@ function seeded(text: string): () => number {
 }
 
 /** Cut-out-letter plate: logo and plate only. Visual copy is aria-hidden, real text is .sr. */
-export function Plate({ text, label }: { text: string; label?: string }) {
+export function Plate({ text, label, size = "plate" }: { text: string; label?: string; size?: "plate" | "logo" }) {
   const rand = seeded(text);
   const letters = [...text].map((ch, i) => {
     if (ch === " ") return <span key={i} className="pl-gap" />;
@@ -100,19 +100,19 @@ export function Plate({ text, label }: { text: string; label?: string }) {
     return <span key={i} className={`pl f${family} k${kit}`} style={style}>{upper ? ch.toUpperCase() : ch.toLowerCase()}</span>;
   });
   return (
-    <div className="plate-wrap">
+    <div className={`plate-wrap${size === "logo" ? " logo" : ""}`}>
       {label && <span className="plate-l">{label}</span>}
       <span className="sr">{text}</span>
-      <div className="plate" aria-hidden="true">{letters}</div>
+      <div className={`plate${size === "logo" ? " logo" : ""}`} aria-hidden="true">{letters}</div>
     </div>
   );
 }
 
 /* ---------- cards ---------- */
 
-export function Card({ variant = "rest", index = 0, numeral, seal, title, summary, meta, tag, command, label, headingLevel = 3, children }: {
+export function Card({ variant = "rest", index = 0, numeral, seal, title, summary, meta, tag, command, label, headingLevel = 3, clamp = false, children }: {
   variant?: "rest" | "focus"; index?: number; numeral?: string; seal?: ReactNode; title: ReactNode; summary?: ReactNode;
-  meta?: ReactNode; tag?: string; command?: ReactNode; label: string; headingLevel?: 2 | 3 | 4; children?: ReactNode;
+  meta?: ReactNode; tag?: string; command?: ReactNode; label: string; headingLevel?: 2 | 3 | 4; clamp?: boolean; children?: ReactNode;
 }) {
   const H = `h${headingLevel}` as "h2" | "h3" | "h4";
   return (
@@ -123,7 +123,7 @@ export function Card({ variant = "rest", index = 0, numeral, seal, title, summar
         {numeral && <span className="numeral" aria-hidden="true">{numeral}</span>}
         {seal}
         <H className="card-title">{title}</H>
-        {summary && <p className="card-sum">{summary}</p>}
+        {summary && <p className={`card-sum${clamp ? " clamp" : ""}`}>{summary}</p>}
         {children}
         {(meta || tag) && (
           <p className="meta"><span>{meta}</span>{tag && <span className="tag">#{tag}</span>}</p>
@@ -137,10 +137,10 @@ export function Card({ variant = "rest", index = 0, numeral, seal, title, summar
 /* ---------- controls ---------- */
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "secondary" | "danger"; disabledReason?: string;
+  variant?: "primary" | "secondary" | "danger"; size?: "md" | "sm"; disabledReason?: string;
 };
 
-export function Button({ variant = "primary", disabledReason, disabled, children, className = "", ...rest }: ButtonProps) {
+export function Button({ variant = "primary", size = "md", disabledReason, disabled, children, className = "", ...rest }: ButtonProps) {
   const reasonId = useId();
   return (
     <>
@@ -149,7 +149,7 @@ export function Button({ variant = "primary", disabledReason, disabled, children
         {...rest}
         disabled={disabled}
         aria-describedby={disabled && disabledReason ? reasonId : rest["aria-describedby"]}
-        className={`btn btn-${variant} ${className}`.trim()}
+        className={`btn btn-${variant}${size === "sm" ? " btn-sm" : ""} ${className}`.trim()}
       >
         {variant === "danger" && <span aria-hidden="true">✕ </span>}
         {children}
@@ -184,6 +184,25 @@ export function Field({ label, error, hint, multiline = false, ...input }: {
         : hint ? <p id={noteId} className="field-hint">{hint}</p> : null}
     </div>
   );
+}
+
+export function SelectField({ label, children, ...select }: { label: string; children: ReactNode } & SelectHTMLAttributes<HTMLSelectElement>) {
+  const id = useId();
+  return (
+    <div className="field">
+      <label htmlFor={id}>{label}</label>
+      <select {...select} id={id} className="field-input">{children}</select>
+    </div>
+  );
+}
+
+/** Bordered container for a task (a form or a block of controls). */
+export function Panel({ title, as = "section", children, ...rest }: { title: string; as?: "section" | "form"; children: ReactNode } & Omit<FormHTMLAttributes<HTMLFormElement>, "title">) {
+  const id = useId();
+  const body = (<><h2 id={id} className="panel-title">{title}</h2>{children}</>);
+  return as === "form"
+    ? <form {...rest} aria-labelledby={id} className="panel">{body}</form>
+    : <section aria-labelledby={id} className="panel">{body}</section>;
 }
 
 /* ---------- data and feedback ---------- */

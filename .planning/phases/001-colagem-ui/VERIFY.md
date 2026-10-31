@@ -21,3 +21,7 @@ Defects found by the gates and fixed (kept for the record):
 Not covered: Level 2 (3D), real-device performance, screen reader run by a person, Firefox and Safari, and the owner's judgement of the squint screenshots (`review_mode=human_pending`).
 
 Package: see `artifacts/package.json` (version, SHA-256, commit). Consumers pin that hash in their `docs/harness/sources.lock.json`.
+
+## 0.2.0 (2026-10-31)
+
+Added `Plate size="logo"`, `Panel`, `SelectField`, `Button size="sm"` and `Card clamp` for the P06 console. `python scripts/check_full.py` exit 0: 39 unit tests, budget 4.7 KB gzip of 40 KB, 7 Playwright tests with axe contrast in both themes (gallery now includes the new components). Evidence: `artifacts/evidence/colagem-ui-001/check-full.txt`.

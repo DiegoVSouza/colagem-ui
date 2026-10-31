@@ -6,7 +6,7 @@ import axe from "axe-core";
 import { useState } from "react";
 import { describe, expect, it, vi } from "vitest";
 import { Gallery } from "../gallery/Gallery";
-import { Button, Card, Field, Modal, StatusSeal, Toast, pickBackground } from "./index";
+import { Button, Card, Field, Modal, Panel, Plate, SelectField, StatusSeal, Toast, pickBackground } from "./index";
 
 const read = (f: string) => readFileSync(join(process.cwd(), f), "utf8");
 const style = read("src/style.css").replace(/\/\*[\s\S]*?\*\//g, "");
@@ -122,6 +122,26 @@ describe("components", () => {
     expect(dialog.contains(document.activeElement)).toBe(true);
     await user.keyboard("{Escape}");
     expect(screen.queryByRole("dialog")).toBeNull();
+  });
+});
+
+describe("0.2.0 additions", () => {
+  it("logo-size plate keeps the real text for screen readers and hides the letters", () => {
+    const { container } = render(<Plate text="SUPPORTOPS" size="logo" />);
+    expect(container.querySelector(".plate.logo")?.getAttribute("aria-hidden")).toBe("true");
+    expect(container.querySelector(".sr")?.textContent).toBe("SUPPORTOPS");
+  });
+
+  it("panel as form is labelled by its title, select has a visible label, small button has its class", () => {
+    render(<Panel as="form" title="Refund" aria-label={undefined}><SelectField label="Rating"><option>5</option></SelectField><Button size="sm">Go</Button></Panel>);
+    expect(screen.getByRole("form", { name: "Refund" })).toBeTruthy();
+    expect(screen.getByLabelText("Rating").tagName).toBe("SELECT");
+    expect(screen.getByRole("button", { name: "Go" }).className).toContain("btn-sm");
+  });
+
+  it("card summary can be clamped", () => {
+    const { container } = render(<Card label="x" title="T" summary="S" clamp />);
+    expect(container.querySelector(".card-sum.clamp")).toBeTruthy();
   });
 });
 

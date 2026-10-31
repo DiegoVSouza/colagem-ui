@@ -42,6 +42,8 @@ kbd { box-shadow: 0 0 0 1px currentColor; padding: 0 var(--space-1); }
 /* plate: cut-out letters */
 .plate-wrap { display: inline-block; margin-bottom: var(--space-6); }
 .plate-l { display: inline-block; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; transform: rotate(-2deg); padding: 0 var(--space-2); }
+.plate-wrap.logo { margin-bottom: 0; }
+.plate.logo { font-size: 24px; transform: none; flex-wrap: nowrap; white-space: nowrap; }
 .plate { display: flex; flex-wrap: nowrap; white-space: nowrap; font-size: clamp(40px, 8vw, 92px); transform: rotate(-2.5deg); }
 .pl { display: inline-block; padding: 0 0.06em; line-height: 1.1; transform: translateY(var(--dy)) rotate(var(--rot)); }
 .pl-gap { display: inline-block; width: 0.3em; }
@@ -75,6 +77,7 @@ kbd { box-shadow: 0 0 0 1px currentColor; padding: 0 var(--space-1); }
 .seal { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; background: var(--paper); color: var(--ink); padding: 2px var(--space-2); }
 .cw.focus .seal { background: var(--ink); color: var(--paper); }
 @media (max-width: 760px) {
+  .plate.logo { flex-wrap: nowrap; white-space: nowrap; }
   .numeral { font-size: 54px; }
   .item { padding-right: 78px; }
   .cw.even { transform: rotate(var(--tilt-even)); }
@@ -84,6 +87,7 @@ kbd { box-shadow: 0 0 0 1px currentColor; padding: 0 var(--space-1); }
 /* ---- controls ---- */
 .btn { min-height: var(--hit-main); padding: 0 var(--space-5); font: 700 16px/1 var(--f-body); text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; border: 3px solid var(--red); background: var(--red); color: var(--on-red); transition: transform 0.15s; }
 .btn:hover:not(:disabled) { transform: translate(2px, 2px); }
+.btn-sm { min-height: var(--hit); padding: 0 var(--space-3); font-size: 13px; }
 .btn-secondary { background: var(--ink); border-color: var(--paper); color: var(--paper); }
 .btn-danger { background: var(--paper); border-color: var(--red-text); color: var(--ink); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -92,6 +96,11 @@ kbd { box-shadow: 0 0 0 1px currentColor; padding: 0 var(--space-1); }
 .tg[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: var(--on-red); }
 .field { display: grid; gap: var(--space-1); margin: var(--space-4) 0; }
 .field label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.panel { background: var(--card); color: var(--paper); border: var(--border-strong); padding: var(--space-5); margin: var(--space-5) 0; max-width: 720px; display: grid; gap: var(--space-2); }
+.panel-title { font-size: 24px; letter-spacing: 0.03em; margin-bottom: var(--space-2); }
+.panel .field-hint { color: var(--mut); }
+.panel .reason { color: var(--mut); }
+.clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .field-input { width: 100%; min-height: var(--hit); padding: var(--space-2) var(--space-3); background: var(--card); color: var(--paper); border: var(--border-strong); font: 400 14px/1.5 var(--f-body); }
 .field-input.has-error { border-color: var(--err); }
 .field-error { margin: 0; color: var(--err); font-size: 14px; }
