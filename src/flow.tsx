@@ -179,7 +179,7 @@ export function FlowDiagram({ flow, layout, lang, labels, links, live, interval 
 
   const sceneIds = useMemo(() => {
     const scenario = flow.scenarios?.find((s) => s.id === scenarioId);
-    return scenario ? scenario.scenes : flow.scenes.map((s) => s.id);
+    return scenario ? scenario.scenes : flow.scenes.filter((s) => !s.scenarioOnly).map((s) => s.id);
   }, [flow, scenarioId]);
   const scene = index === null ? null : flow.scenes.find((s) => s.id === sceneIds[index]) ?? null;
 

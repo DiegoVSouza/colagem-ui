@@ -32,6 +32,8 @@ export interface FlowScene {
   /** Edge keys, `${from}>${to}`. */
   edges: string[];
   caption: Text;
+  /** Only reachable through a failure scenario; left out of the main walkthrough. */
+  scenarioOnly?: boolean;
 }
 
 export interface FlowScenario {
