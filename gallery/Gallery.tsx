@@ -2,7 +2,9 @@ import { useState } from "react";
 import {
   AppFooter, AppHeader, Band, Button, Card, Command, DataTable, EmptyState, Field, GhostNumber, Headline, Lead,
   Layers, Modal, Panel, Plate, Progress, SelectField, SkipLink, StatusSeal, Toast, Toggle, WakeNotice, useBackgroundMode,
+  FlowDiagram,
 } from "../src";
+import { sampleFlow, sampleLabels, sampleLayout } from "./sample-flow";
 
 const rows = [
   { id: "p05", name: "SupportOps Platform", features: 17 },
@@ -46,6 +48,8 @@ export function Gallery({ theme = "breu" }: { theme?: "breu" | "papel" }) {
           { key: "name", label: "Project", render: (r) => r.name },
           { key: "n", label: "Features", numeric: true, render: (r) => r.features },
         ]} />
+        <h2>Flow diagram</h2>
+        <FlowDiagram flow={sampleFlow} layout={sampleLayout} lang="en" labels={sampleLabels} links={{ code: (p) => `#${p}`, docs: (p) => `#${p}` }} />
         <h2>Feedback</h2>
         <Progress value={40} label="Upload" />
         <WakeNotice service="P05" elapsed={7} expected={20} onRetry={() => undefined} labels={{ waking: (s, e, x) => `Waking ${s}: ${e}s of about ${x}s`, failed: (s) => `${s} did not answer`, retry: "Retry" }} />

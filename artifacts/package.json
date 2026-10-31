@@ -1,8 +1,8 @@
 {
   "name": "colagem-ui",
-  "version": "0.3.0",
-  "file": "artifacts/packages/colagem-ui-0.3.0.tgz",
-  "sha256": "2c34919289abd72f100894f9a2404ea29a02f27e12a52f90a1b556ce2410f74e",
-  "commit": "45043be5e493338718121c60cb45c6ff41fbe0fa",
-  "dirty": false
+  "version": "0.4.0",
+  "file": "artifacts/packages/colagem-ui-0.4.0.tgz",
+  "sha256": "1da0edf60fe4124da78b2772ccea6356acaffd8a47b611063e1b8b1f7db8b789",
+  "commit": "b010779dba73bd16d381eaa2a62646cad2211c76",
+  "dirty": true
 }

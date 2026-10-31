@@ -10,7 +10,16 @@ if (!limitKb) {
   process.exit(1);
 }
 const dist = join(root, "dist");
-const scripts = readdirSync(dist).filter((name) => name.endsWith(".js"));
+const all = readdirSync(dist).filter((name) => name.endsWith(".js"));
+// layout.js is the build-time entry. It is not part of any browser bundle and is the only file allowed to name elkjs.
+const scripts = all.filter((name) => name !== "layout.js");
+for (const name of scripts) {
+  const text = readFileSync(join(dist, name), "utf8");
+  if (["elkjs", "elk.bundled", "ElkNode", "new ELK"].some((word) => text.includes(word))) {
+    console.error(`budget: ${name} contains elkjs; the layout engine must stay in layout.js (EPL-2.0 OR GPL-3.0, build time only)`);
+    process.exit(1);
+  }
+}
 if (scripts.length === 0) {
   console.error("budget: no JavaScript in dist; run npm run build first");
   process.exit(1);

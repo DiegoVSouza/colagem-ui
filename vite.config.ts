@@ -4,8 +4,8 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [react()],
   build: {
-    lib: { entry: "src/index.ts", formats: ["es"], fileName: () => "index.js", cssFileName: "style" },
-    rollupOptions: { external: ["react", "react-dom", "react/jsx-runtime"] },
+    lib: { entry: { index: "src/index.ts", layout: "src/layout.ts" }, formats: ["es"], fileName: (_format, name) => `${name}.js`, cssFileName: "style" },
+    rollupOptions: { external: ["react", "react-dom", "react/jsx-runtime", /^elkjs/] },
     sourcemap: false,
   },
   test: {

@@ -4,6 +4,12 @@
     {"id": "components-core", "description": "Level 0 components with glyph seals, cut cards, forms, feedback", "requirement_ids": ["DS-003", "DS-005", "A11Y-001"], "status": "PASS_LOCAL; SCREEN_READER_PENDING", "evidence": "artifacts/evidence/colagem-ui-001/check-full.txt"},
     {"id": "layers-2d", "description": "Level 1 2D layers, reduced motion and background selector", "requirement_ids": ["DS-004"], "status": "PASS_LOCAL; SQUINT_REVIEW_BY_OWNER_PENDING", "evidence": "artifacts/evidence/colagem-ui-001/gallery-1000-squint.png"},
     {"id": "package-tarball", "description": "Pinned tarball with SHA-256 for consumers", "requirement_ids": ["PKG-001", "PERF-001"], "status": "PASS_LOCAL", "evidence": "artifacts/package.json"},
-    {"id": "level-2-3d", "description": "Three.js scene", "requirement_ids": [], "status": "PENDING", "evidence": "Out of scope for phase 001; lives in P07"}
+    {"id": "level-2-3d", "description": "Three.js scene", "requirement_ids": [], "status": "PENDING", "evidence": "Out of scope for phase 001; lives in P07"},
+    {
+        "id": "flow-diagram",
+        "description": "FlowDiagram with build-time ELK layout, SVG in React, walkthrough, failure scenarios, text version and Mermaid export",
+        "status": "PASS_LOCAL_REAL_CHROME_AXE",
+        "evidence": "artifacts/evidence/colagem-ui-040/check-full.txt"
+    }
   ]
 }
