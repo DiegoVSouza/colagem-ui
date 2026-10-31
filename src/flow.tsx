@@ -4,8 +4,9 @@ import { edgeKey } from "./flow-types";
 import { LINE_H, wrapLabel } from "./flow-text";
 
 export interface FlowLinks {
-  code: (path: string) => string;
-  docs: (path: string) => string;
+  /** The node is passed so the host can pick the repository (`node.repo`). */
+  code: (path: string, node: FlowNode) => string;
+  docs: (path: string, node: FlowNode) => string;
 }
 
 export interface FlowDiagramProps {
@@ -292,8 +293,8 @@ export function FlowDiagram({ flow, layout, lang, labels, links, live, interval 
           <p>{node.detail[lang]}</p>
           {links && (node.code || node.docs) && (
             <p className="flow-links">
-              {node.code && <a href={links.code(node.code)} rel="noopener noreferrer">{labels.code}</a>}
-              {node.docs && <a href={links.docs(node.docs)} rel="noopener noreferrer">{labels.docs}</a>}
+              {node.code && <a href={links.code(node.code, node)} rel="noopener noreferrer">{labels.code}</a>}
+              {node.docs && <a href={links.docs(node.docs, node)} rel="noopener noreferrer">{labels.docs}</a>}
             </p>
           )}
           <button type="button" className="flow-btn" onClick={() => setSelected(null)}>{labels.detailClose}</button>

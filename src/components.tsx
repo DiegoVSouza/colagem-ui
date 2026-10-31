@@ -92,6 +92,10 @@ function seeded(text: string): () => number {
 
 /** Cut-out-letter plate: logo and plate only. Visual copy is aria-hidden, real text is .sr. */
 export function Plate({ text, label, size = "plate" }: { text: string; label?: string; size?: "plate" | "logo" }) {
+  // Letter offsets are inline styles. A strict CSP (style-src 'self') drops inline style attributes that arrive in
+  // server-rendered HTML but allows the same values set from script, so they are applied after mount only.
+  const [styled, setStyled] = useState(false);
+  useEffect(() => setStyled(true), []);
   const rand = seeded(text);
   const letters = [...text].map((ch, i) => {
     if (ch === " ") return <span key={i} className="pl-gap" />;
@@ -99,7 +103,7 @@ export function Plate({ text, label, size = "plate" }: { text: string; label?: s
     const kit = Math.floor(rand() * 3);
     const upper = rand() < 0.5;
     const style = { "--rot": `${((rand() - 0.5) * 9.6).toFixed(2)}deg`, "--dy": `${((rand() - 0.5) * 2).toFixed(2)}px` } as CSSProperties;
-    return <span key={i} className={`pl f${family} k${kit}`} style={style}>{upper ? ch.toUpperCase() : ch.toLowerCase()}</span>;
+    return <span key={i} className={`pl f${family} k${kit}`} style={styled ? style : undefined}>{upper ? ch.toUpperCase() : ch.toLowerCase()}</span>;
   });
   return (
     <div className={`plate-wrap${size === "logo" ? " logo" : ""}`}>

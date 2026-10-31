@@ -14,6 +14,8 @@ export interface FlowNode {
   detail: Text;
   /** Owning project, e.g. "P05". Shown in the node detail. */
   project: string;
+  /** Which repository holds `code` and `docs`, as the host app names it (p05, lab, ...). */
+  repo?: string;
   lane?: string;
   /** Path inside the project's repository. The host app turns it into a permalink. */
   code?: string;
