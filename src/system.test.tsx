@@ -6,7 +6,7 @@ import axe from "axe-core";
 import { useState } from "react";
 import { describe, expect, it, vi } from "vitest";
 import { Gallery } from "../gallery/Gallery";
-import { Button, Card, Field, Modal, Panel, Plate, SelectField, StatusSeal, Toast, pickBackground } from "./index";
+import { Button, Card, Field, Headline, Modal, Panel, Plate, SelectField, StatusSeal, Toast, pickBackground } from "./index";
 
 const read = (f: string) => readFileSync(join(process.cwd(), f), "utf8");
 const style = read("src/style.css").replace(/\/\*[\s\S]*?\*\//g, "");
@@ -137,6 +137,13 @@ describe("0.2.0 additions", () => {
     expect(screen.getByRole("form", { name: "Refund" })).toBeTruthy();
     expect(screen.getByLabelText("Rating").tagName).toBe("SELECT");
     expect(screen.getByRole("button", { name: "Go" }).className).toContain("btn-sm");
+  });
+
+  it("headline can take focus on mount without becoming a tab stop", () => {
+    render(<Headline focusOnMount>Title</Headline>);
+    const h1 = screen.getByRole("heading", { level: 1 });
+    expect(document.activeElement).toBe(h1);
+    expect(h1.getAttribute("tabindex")).toBe("-1");
   });
 
   it("card summary can be clamped", () => {

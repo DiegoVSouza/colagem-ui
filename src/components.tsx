@@ -46,11 +46,13 @@ export function SkipLink({ href = "#main", children }: { href?: string; children
 
 /* ---------- text ---------- */
 
-export function Headline({ children, id }: { children: ReactNode; id?: string }) {
+export function Headline({ children, id, focusOnMount = false }: { children: ReactNode; id?: string; focusOnMount?: boolean }) {
+  const ref = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { if (focusOnMount) ref.current?.focus(); }, [focusOnMount]);
   return (
     <div className="hl-wrap">
       <span className="hl-block" aria-hidden="true" />
-      <h1 className="hl" id={id}>{children}</h1>
+      <h1 className="hl" id={id} ref={ref} tabIndex={focusOnMount ? -1 : undefined}>{children}</h1>
     </div>
   );
 }

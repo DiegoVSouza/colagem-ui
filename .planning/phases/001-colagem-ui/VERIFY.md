@@ -25,3 +25,7 @@ Package: see `artifacts/package.json` (version, SHA-256, commit). Consumers pin 
 ## 0.2.0 (2026-10-31)
 
 Added `Plate size="logo"`, `Panel`, `SelectField`, `Button size="sm"` and `Card clamp` for the P06 console. `python scripts/check_full.py` exit 0: 39 unit tests, budget 4.7 KB gzip of 40 KB, 7 Playwright tests with axe contrast in both themes (gallery now includes the new components). Evidence: `artifacts/evidence/colagem-ui-001/check-full.txt`.
+
+## 0.3.0 (2026-10-31)
+
+`Headline focusOnMount` (focus moves to the h1 on navigation without making it a tab stop). `check_full.py` exit 0: 40 unit tests, 4.7 KB gzip, 7 Playwright tests.
