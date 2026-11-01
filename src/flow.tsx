@@ -155,15 +155,16 @@ function Svg(p: SvgProps) {
             <text className="flow-label" x={box.w / 2} y={box.h / 2 - ((lines.length - 1) * LINE_H) / 2 + 8} textAnchor="middle">
               {lines.map((line, i) => (
                 <tspan key={i} x={box.w / 2} dy={i === 0 ? 0 : LINE_H}>
-                  {i < lines.length - 1 ? `${line} ` : line}
+                  {i < lines.length - 1 || lit ? `${line} ` : line}
                 </tspan>
               ))}
+              {/* The measurement lives in the same text element as the label: axe compares one element's visible text with the node's name, and two separate text elements failed that check. */}
+              {lit && (
+                <tspan className="flow-live" x={box.w / 2} y={box.h + 16}>
+                  {lit}
+                </tspan>
+              )}
             </text>
-            {lit && (
-              <text className="flow-live" x={box.w / 2} y={box.h + 16} textAnchor="middle">
-                {lit}
-              </text>
-            )}
           </g>
         );
       })}

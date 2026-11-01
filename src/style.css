@@ -180,7 +180,7 @@ main, .foot, .top { position: relative; z-index: var(--z-content); }
 .flow-box { fill: var(--card); stroke: var(--paper); stroke-width: 2; }
 .flow-shadow { fill: var(--dred); }
 .flow-label { fill: var(--paper); font-family: var(--f-display); font-size: 22px; text-transform: uppercase; letter-spacing: 0.02em; }
-.flow-live { fill: var(--paper); font-family: var(--f-body); font-size: 13px; }
+.flow-live { fill: var(--paper); font-family: var(--f-body); font-size: 13px; text-transform: none; letter-spacing: normal; }
 .flow-node { cursor: pointer; }
 .flow-node:focus-visible { outline: var(--focus); outline-offset: 4px; }
 .flow-node.focus .flow-box { fill: var(--paper); stroke: var(--red); stroke-width: 3; }
