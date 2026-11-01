@@ -140,9 +140,8 @@ describe("FlowDiagram", () => {
     rerender(<FlowDiagram flow={flow} layout={layout} lang="en" labels={labels} live={{ b: "412 ms" }} />);
     const lit = document.querySelector('.flow-h [data-node="b"]')!;
     expect(lit.classList.contains("live")).toBe(true);
-    // The measurement is in the accessible name and hidden from the visible-text comparison (axe label-content-name-mismatch).
-    expect(lit.getAttribute("aria-label")).toContain("412 ms");
-    expect(lit.querySelector(".flow-live")?.getAttribute("aria-hidden")).toBe("true");
+    // The accessible name must contain everything visible in the node, in order, or axe reports label-content-name-mismatch.
+    expect(lit.getAttribute("aria-label")).toBe("Agents triage 412 ms");
     expect(lit.getAttribute("aria-label")).toBe("Agents triage, 412 ms");
   });
 

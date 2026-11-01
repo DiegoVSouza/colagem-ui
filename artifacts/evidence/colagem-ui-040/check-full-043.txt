@@ -1,0 +1,41 @@
+
+ RUN  v5.0.5 C:/estudo/Golpe/lab/projects/p08
+
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+ ❯ src/flow.test.tsx (14 tests | 1 failed) 1017ms
+   ❯ FlowDiagram (9)
+     × lights a node only when a real run says so 17ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/flow.test.tsx > FlowDiagram > lights a node only when a real run says so
+AssertionError: expected 'Agents triage 412 ms' to be 'Agents triage, 412 ms' // Object.is equality
+
+Expected: "Agents triage, 412 ms"
+Received: "Agents triage 412 ms"
+
+ ❯ src/flow.test.tsx:145:44
+    143|     // The accessible name must contain everything visible in the node…
+    144|     expect(lit.getAttribute("aria-label")).toBe("Agents triage 412 ms"…
+    145|     expect(lit.getAttribute("aria-label")).toBe("Agents triage, 412 ms…
+       |                                            ^
+    146|   });
+    147|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 4 passed (5)
+      Tests  1 failed | 61 passed (62)
+   Start at  23:22:08
+   Duration  4.23s (environment 64%, tests 17%, setup 10%, import 7%, transform 2%)
+
+lint: exit 0
+typecheck: exit 0
+test: exit 1
+check-fast: FAIL, run npm run test and fix the first error
+fast: exit 1
+check-full: FAIL at fast

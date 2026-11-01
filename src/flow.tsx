@@ -145,7 +145,7 @@ function Svg(p: SvgProps) {
             tabIndex={0}
             role="button"
             aria-pressed={p.selected === n.id}
-            aria-label={`${n.label[p.lang]}${lit ? `, ${lit}` : ""}`}
+            aria-label={`${n.label[p.lang]}${lit ? ` ${lit}` : ""}`}
             data-node={n.id}
             onClick={() => p.onSelect(n.id)}
             onKeyDown={(event) => p.onKey(event, n.id)}
@@ -159,9 +159,8 @@ function Svg(p: SvgProps) {
                 </tspan>
               ))}
             </text>
-            {/* The measurement is part of the accessible name above, so it is hidden here: a node's visible text must be contained in its name. */}
             {lit && (
-              <text className="flow-live" x={box.w / 2} y={box.h + 16} textAnchor="middle" aria-hidden="true">
+              <text className="flow-live" x={box.w / 2} y={box.h + 16} textAnchor="middle">
                 {lit}
               </text>
             )}
