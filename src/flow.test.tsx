@@ -44,6 +44,9 @@ describe("layoutFlow", () => {
     for (const l of [layout.horizontal, layout.vertical]) {
       expect(l.nodes).toHaveLength(4);
       for (const n of l.nodes) {
+        // Regression: nodes were laid out at size zero, so the overlap check below passed on a collapsed diagram.
+        expect(n.w, `${n.id} width`).toBeGreaterThanOrEqual(120);
+        expect(n.h, `${n.id} height`).toBeGreaterThanOrEqual(54);
         expect(n.x).toBeGreaterThanOrEqual(0);
         expect(n.x + n.w).toBeLessThanOrEqual(l.width);
         expect(n.y + n.h).toBeLessThanOrEqual(l.height);

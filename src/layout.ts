@@ -26,7 +26,11 @@ async function place(flow: Flow, direction: "RIGHT" | "DOWN", lang: Lang): Promi
       "elk.layered.nodePlacement.strategy": "NETWORK_SIMPLEX",
       "elk.layered.crossingMinimization.strategy": "LAYER_SWEEP",
     },
-    children: flow.nodes.map((n) => ({ id: n.id, ...sizes.get(n.id)! })),
+    // ELK reads width and height. Spreading nodeSize() would hand it w and h, which it ignores, and every node would be laid out at size zero.
+    children: flow.nodes.map((n) => {
+      const size = sizes.get(n.id)!;
+      return { id: n.id, width: size.w, height: size.h };
+    }),
     edges: flow.edges.map((e) => ({ id: edgeKey(e), sources: [e.from], targets: [e.to] })),
   };
   const out = await elk.layout(graph);
