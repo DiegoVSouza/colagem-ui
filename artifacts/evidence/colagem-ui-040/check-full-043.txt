@@ -5,37 +5,46 @@ Not implemented: HTMLCanvasElement's getContext() method: without installing the
 Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
 Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
 Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
- ❯ src/flow.test.tsx (14 tests | 1 failed) 1017ms
-   ❯ FlowDiagram (9)
-     × lights a node only when a real run says so 17ms
 
-⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
-
- FAIL  src/flow.test.tsx > FlowDiagram > lights a node only when a real run says so
-AssertionError: expected 'Agents triage 412 ms' to be 'Agents triage, 412 ms' // Object.is equality
-
-Expected: "Agents triage, 412 ms"
-Received: "Agents triage 412 ms"
-
- ❯ src/flow.test.tsx:145:44
-    143|     // The accessible name must contain everything visible in the node…
-    144|     expect(lit.getAttribute("aria-label")).toBe("Agents triage 412 ms"…
-    145|     expect(lit.getAttribute("aria-label")).toBe("Agents triage, 412 ms…
-       |                                            ^
-    146|   });
-    147|
-
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
-
-
- Test Files  1 failed | 4 passed (5)
-      Tests  1 failed | 61 passed (62)
-   Start at  23:22:08
-   Duration  4.23s (environment 64%, tests 17%, setup 10%, import 7%, transform 2%)
+ Test Files  5 passed (5)
+      Tests  62 passed (62)
+   Start at  23:22:40
+   Duration  4.95s (environment 60%, tests 20%, setup 10%, import 8%, transform 2%)
 
 lint: exit 0
 typecheck: exit 0
-test: exit 1
-check-fast: FAIL, run npm run test and fix the first error
-fast: exit 1
-check-full: FAIL at fast
+test: exit 0
+check-fast: OK
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/style.css              18.10 kB │ gzip: 4.32 kB
+dist/flow-text-Lh7b2TQk.js   0.46 kB │ gzip: 0.30 kB
+dist/layout.js               1.57 kB │ gzip: 0.80 kB
+dist/index.js               35.19 kB │ gzip: 9.45 kB
+
+[32m✓ built in 91ms[39m
+budget: PASS (9.5 KB gzip of 40 KB)
+
+Running 7 tests using 1 worker
+
+  ✓  1 e2e\gallery.spec.ts:10:5 › gallery breu 1000px: axe with contrast, no overflow, no console errors (1.9s)
+  ✓  2 e2e\gallery.spec.ts:10:5 › gallery breu 360px: axe with contrast, no overflow, no console errors (1.8s)
+  ✓  3 e2e\gallery.spec.ts:10:5 › gallery papel 1000px: axe with contrast, no overflow, no console errors (1.8s)
+  ✓  4 e2e\gallery.spec.ts:10:5 › gallery papel 360px: axe with contrast, no overflow, no console errors (1.5s)
+  ✓  5 e2e\gallery.spec.ts:32:1 › reduced motion stops the band and the focus-card shake (430ms)
+  ✓  6 e2e\gallery.spec.ts:40:1 › background mode 2d is chosen without WebGL2, and the page still renders (492ms)
+  ✓  7 e2e\gallery.spec.ts:52:1 › squint screenshot (DS-006 evidence, judged by the owner) (665ms)
+
+  7 passed (12.0s)
+pack: colagem-ui-0.4.3.tgz sha256=fcf0bb4a488e1c6f2fe3b1442451093cfba758ff8a0fbdc4154a4a3d0cf9abb4 commit=4a923eec810ea472139fcce7519780c7f6aaee39 (dirty tree)
+(node:23204) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+fast: exit 0
+build: exit 0
+budget: exit 0
+e2e: exit 0
+pack: exit 0
+check-full: PASS

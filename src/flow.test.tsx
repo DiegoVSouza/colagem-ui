@@ -142,7 +142,6 @@ describe("FlowDiagram", () => {
     expect(lit.classList.contains("live")).toBe(true);
     // The accessible name must contain everything visible in the node, in order, or axe reports label-content-name-mismatch.
     expect(lit.getAttribute("aria-label")).toBe("Agents triage 412 ms");
-    expect(lit.getAttribute("aria-label")).toBe("Agents triage, 412 ms");
   });
 
   it("travels a token along the active edge, and not under reduced motion", async () => {
