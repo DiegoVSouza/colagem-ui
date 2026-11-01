@@ -159,8 +159,9 @@ function Svg(p: SvgProps) {
                 </tspan>
               ))}
             </text>
+            {/* The measurement is part of the accessible name above, so it is hidden here: a node's visible text must be contained in its name. */}
             {lit && (
-              <text className="flow-live" x={box.w / 2} y={box.h + 16} textAnchor="middle">
+              <text className="flow-live" x={box.w / 2} y={box.h + 16} textAnchor="middle" aria-hidden="true">
                 {lit}
               </text>
             )}
