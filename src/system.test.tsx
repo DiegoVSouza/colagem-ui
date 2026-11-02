@@ -123,6 +123,15 @@ describe("components", () => {
     await user.keyboard("{Escape}");
     expect(screen.queryByRole("dialog")).toBeNull();
   });
+
+  it("modal closes on a click on its veil but not on a click inside it (FLOW-MODAL-006)", async () => {
+    const user = userEvent.setup();
+    render(<Host />);
+    await user.click(screen.getByRole("heading", { name: "Sure?" }));
+    expect(screen.getByRole("dialog", { name: "Sure?" })).toBeTruthy();
+    await user.click(screen.getByRole("dialog").closest(".modal-veil") as HTMLElement);
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
 });
 
 describe("0.2.0 additions", () => {

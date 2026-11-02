@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
+import { createPortal } from "react-dom";
+import { Modal } from "./components";
 import type { Flow, FlowLabels, FlowLayout, FlowNode, Lang, Layout } from "./flow-types";
 import { edgeKey } from "./flow-types";
 import { LINE_H, wrapLabel } from "./flow-text";
@@ -249,6 +251,7 @@ export function FlowDiagram({ flow, layout, lang, labels, links, live, interval 
   };
 
   const node = selected ? flow.nodes.find((n) => n.id === selected) : null;
+  const closeDetail = useCallback(() => setSelected(null), []);
   const title = flow.title[lang];
   const desc = `${labels.diagramLabel}: ${flowOrder(flow).map((n) => n.label[lang]).join(", ")}`;
   const common = { flow, lang, labels, focusNodes, focusEdges, scoped: scene !== null, selected, live, onSelect: (id: string) => setSelected((c) => (c === id ? null : id)), onKey, title, desc };
@@ -287,19 +290,22 @@ export function FlowDiagram({ flow, layout, lang, labels, links, live, interval 
           labels.allSteps
         )}
       </p>
-      {node && (
-        <aside className="flow-detail" aria-label={node.label[lang]}>
-          <h4>{node.label[lang]}</h4>
-          <p className="flow-proj">{labels.project}: {node.project}</p>
-          <p>{node.detail[lang]}</p>
-          {links && (node.code || node.docs) && (
-            <p className="flow-links">
-              {node.code && <a href={links.code(node.code, node)} rel="noopener noreferrer">{labels.code}</a>}
-              {node.docs && <a href={links.docs(node.docs, node)} rel="noopener noreferrer">{labels.docs}</a>}
-            </p>
-          )}
-          <button type="button" className="flow-btn" onClick={() => setSelected(null)}>{labels.detailClose}</button>
-        </aside>
+      {/* The detail is a modal in document.body: below the diagram a visitor on a long page never saw it, and in the page flow a parent's transform
+          or overflow could clip a fixed overlay. It exists only after a choice, so the server renders nothing here. */}
+      {node && typeof document !== "undefined" && createPortal(
+        <Modal title={node.label[lang]} open onClose={closeDetail} closeLabel={labels.detailClose}>
+          <div className="flow-detail">
+            <p className="flow-proj">{labels.project}: {node.project}</p>
+            <p>{node.detail[lang]}</p>
+            {links && (node.code || node.docs) && (
+              <p className="flow-links">
+                {node.code && <a href={links.code(node.code, node)} rel="noopener noreferrer">{labels.code}</a>}
+                {node.docs && <a href={links.docs(node.docs, node)} rel="noopener noreferrer">{labels.docs}</a>}
+              </p>
+            )}
+          </div>
+        </Modal>,
+        document.body,
       )}
       <details className="flow-text" open>
         <summary>{labels.listTitle}</summary>

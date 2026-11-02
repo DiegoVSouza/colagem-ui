@@ -198,9 +198,9 @@ main, .foot, .top { position: relative; z-index: var(--z-content); }
 .flow-token { fill: var(--red-text); opacity: 0; }
 .flow-caption { min-height: 3.4em; margin: var(--space-3) 0; padding: 10px 14px; background: var(--ink); border-left: 8px solid var(--red); max-width: 70ch; }
 .flow-step { font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
-.flow-detail { background: var(--paper); color: var(--ink); padding: var(--space-4); max-width: 560px; box-shadow: var(--shadow-rest) var(--shadow-rest) 0 var(--red); margin: var(--space-4) 0; }
+/* The node detail is the body of a Modal (rendered in document.body). The veil and the card come from .modal-veil and .modal. */
 .flow-detail a { color: var(--ink); margin-right: var(--space-4); }
-.flow-detail .flow-btn { background: var(--ink); color: var(--paper); }
+.modal:has(.flow-detail) { max-height: calc(100vh - 2 * var(--gutter)); overflow-y: auto; }
 .flow-proj { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; }
 .flow-text { margin-top: var(--space-4); }
 .flow-text summary { cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; min-height: var(--hit); display: flex; align-items: center; }

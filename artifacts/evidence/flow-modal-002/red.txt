@@ -1,0 +1,1938 @@
+
+ RUN  v5.0.5 C:/estudo/Golpe/lab/projects/p08
+
+ ❯ src/flow.test.tsx (17 tests | 4 failed) 2691ms
+   ❯ FlowDiagram (12)
+     × opens node detail with permalinks on Enter and closes it on Escape 316ms
+     × shows the node detail as a modal in document.body, never below the diagram (FLOW-MODAL-001, 002, 004) 292ms
+     × closes the node detail with the Close button and with a click on the veil, and gives focus back (FLOW-MODAL-003) 245ms
+     × keeps a click inside the modal from closing it 264ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/flow.test.tsx > FlowDiagram > opens node detail with permalinks on Enter and closes it on Escape
+TestingLibraryElementError: Unable to find an accessible element with the role "dialog" and name "Ticket arrives"
+
+Here are the accessible roles:
+
+  group:
+
+  Name "Sample flow":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-controls"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Failure scenarios":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Failure scenarios"[39m
+    [33mclass[39m=[32m"flow-scenarios"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-h"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 913 94"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-v"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 230 388"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"flow-text"[39m
+    [33mopen[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Play":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Previous":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Next":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reset":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve your own refund":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(262,16)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(497,16)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(710,16)"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,114)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(32,212)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,310)"[39m
+  [36m/>[39m
+
+  Name "Close":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<p[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"flow-caption"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "Ticket arrives":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33mclass[39m=[32m"flow-detail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Ticket arrives":
+  [36m<h4 />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-proj"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-links"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  link:
+
+  Name "Code":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/src/a.py"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  Name "Docs":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/docs/a.md"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  [36m<ol[39m
+    [33mclass[39m=[32m"flow-list"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flow"[39m
+      [33mdata-flow[39m=[32m"sample"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-label[39m=[32m"Sample flow"[39m
+        [33mclass[39m=[32m"flow-controls"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPlay[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mdisabled[39m=[32m""[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPrevious[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mNext[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mReset[0m
+        [36m</button>[39m
+        [36m<div[39m
+          [33maria-label[39m=[32m"Failure scenarios"[39m
+          [33mclass[39m=[32m"flow-scenarios"[39m
+          [33mrole[39m=[32m"group"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-btn"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mApprove your own refund[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flow-stage"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-label[39m=[32m"Sample flow"[39m
+          [33mclass[39m=[32m"flow-svg flow-h"[39m
+          [33mrole[39m=[32m"group"[39m
+          [33mviewBox[39m=[32m"0 0 913 94"[39m
+        [36m>[39m
+          [36m<title>[39m
+            [0mSample flow[0m
+          [36m</title>[39m
+          [36m<desc>[39m
+            [0mFlow: Ticket arrives, Agents triage, Gate checks, Human decides[0m
+          [36m</desc>[39m
+          [36m<defs>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-red-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow-red"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+          [36m</defs>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M206,43 L262,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M441,43 L497,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M654,43 L710,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Ticket arrives"[39m
+            [33maria-pressed[39m=[32m"true"[39m
+            [33mclass[39m=[32m"flow-node selected"[39m
+            [33mdata-node[39m=[32m"a"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(16,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"95"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"95"[39m
+              [36m>[39m
+                [0mTicket arrives[0m
+              [36m</tspan>[39m
+            [36m</text>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Agents triage"[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-node"[39m
+            [33mdata-node[39m=[32m"b"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(262,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"89.5"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"89.5"[39m
+              [...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/flow.test.tsx:120:27
+    118|     document.querySelector<SVGElement>('.flow-h [data-node="a"]')!.foc…
+    119|     await user.keyboard("{Enter}");
+    120|     const detail = screen.getByRole("dialog", { name: "Ticket arrives"…
+       |                           ^
+    121|     expect(within(detail).getByText("A ticket is created.")).toBeTruth…
+    122|     expect(within(detail).getByRole("link", { name: "Code" }).getAttri…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  src/flow.test.tsx > FlowDiagram > shows the node detail as a modal in document.body, never below the diagram (FLOW-MODAL-001, 002, 004)
+TestingLibraryElementError: Unable to find an accessible element with the role "dialog" and name "Ticket arrives"
+
+Here are the accessible roles:
+
+  group:
+
+  Name "Sample flow":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-controls"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Failure scenarios":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Failure scenarios"[39m
+    [33mclass[39m=[32m"flow-scenarios"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-h"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 913 94"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-v"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 230 388"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"flow-text"[39m
+    [33mopen[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Play":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Previous":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Next":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reset":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve your own refund":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(262,16)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(497,16)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(710,16)"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,114)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(32,212)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,310)"[39m
+  [36m/>[39m
+
+  Name "Close":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<p[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"flow-caption"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "Ticket arrives":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33mclass[39m=[32m"flow-detail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Ticket arrives":
+  [36m<h4 />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-proj"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-links"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  link:
+
+  Name "Code":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/src/a.py"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  Name "Docs":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/docs/a.md"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  [36m<ol[39m
+    [33mclass[39m=[32m"flow-list"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flow"[39m
+      [33mdata-flow[39m=[32m"sample"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-label[39m=[32m"Sample flow"[39m
+        [33mclass[39m=[32m"flow-controls"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPlay[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mdisabled[39m=[32m""[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPrevious[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mNext[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mReset[0m
+        [36m</button>[39m
+        [36m<div[39m
+          [33maria-label[39m=[32m"Failure scenarios"[39m
+          [33mclass[39m=[32m"flow-scenarios"[39m
+          [33mrole[39m=[32m"group"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-btn"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mApprove your own refund[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flow-stage"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-label[39m=[32m"Sample flow"[39m
+          [33mclass[39m=[32m"flow-svg flow-h"[39m
+          [33mrole[39m=[32m"group"[39m
+          [33mviewBox[39m=[32m"0 0 913 94"[39m
+        [36m>[39m
+          [36m<title>[39m
+            [0mSample flow[0m
+          [36m</title>[39m
+          [36m<desc>[39m
+            [0mFlow: Ticket arrives, Agents triage, Gate checks, Human decides[0m
+          [36m</desc>[39m
+          [36m<defs>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-red-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow-red"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+          [36m</defs>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M206,43 L262,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M441,43 L497,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M654,43 L710,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Ticket arrives"[39m
+            [33maria-pressed[39m=[32m"true"[39m
+            [33mclass[39m=[32m"flow-node selected"[39m
+            [33mdata-node[39m=[32m"a"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(16,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"95"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"95"[39m
+              [36m>[39m
+                [0mTicket arrives[0m
+              [36m</tspan>[39m
+            [36m</text>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Agents triage"[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-node"[39m
+            [33mdata-node[39m=[32m"b"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(262,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"89.5"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"89.5"[39m
+              [...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/flow.test.tsx:132:27
+    130|     document.querySelector<SVGElement>('.flow-h [data-node="a"]')!.foc…
+    131|     await user.keyboard("{Enter}");
+    132|     const dialog = screen.getByRole("dialog", { name: "Ticket arrives"…
+       |                           ^
+    133|     expect(dialog.getAttribute("aria-modal")).toBe("true");
+    134|     expect(container.contains(dialog)).toBe(false);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  src/flow.test.tsx > FlowDiagram > closes the node detail with the Close button and with a click on the veil, and gives focus back (FLOW-MODAL-003)
+TestingLibraryElementError: Unable to find an accessible element with the role "dialog"
+
+Here are the accessible roles:
+
+  group:
+
+  Name "Sample flow":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-controls"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Failure scenarios":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Failure scenarios"[39m
+    [33mclass[39m=[32m"flow-scenarios"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-h"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 913 94"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-v"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 230 388"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"flow-text"[39m
+    [33mopen[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Play":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Previous":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Next":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reset":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve your own refund":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(262,16)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(497,16)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(710,16)"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,114)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(32,212)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,310)"[39m
+  [36m/>[39m
+
+  Name "Close":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<p[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"flow-caption"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "Ticket arrives":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33mclass[39m=[32m"flow-detail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Ticket arrives":
+  [36m<h4 />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-proj"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-links"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  link:
+
+  Name "Code":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/src/a.py"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  Name "Docs":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/docs/a.md"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  [36m<ol[39m
+    [33mclass[39m=[32m"flow-list"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flow"[39m
+      [33mdata-flow[39m=[32m"sample"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-label[39m=[32m"Sample flow"[39m
+        [33mclass[39m=[32m"flow-controls"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPlay[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mdisabled[39m=[32m""[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPrevious[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mNext[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mReset[0m
+        [36m</button>[39m
+        [36m<div[39m
+          [33maria-label[39m=[32m"Failure scenarios"[39m
+          [33mclass[39m=[32m"flow-scenarios"[39m
+          [33mrole[39m=[32m"group"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-btn"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mApprove your own refund[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flow-stage"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-label[39m=[32m"Sample flow"[39m
+          [33mclass[39m=[32m"flow-svg flow-h"[39m
+          [33mrole[39m=[32m"group"[39m
+          [33mviewBox[39m=[32m"0 0 913 94"[39m
+        [36m>[39m
+          [36m<title>[39m
+            [0mSample flow[0m
+          [36m</title>[39m
+          [36m<desc>[39m
+            [0mFlow: Ticket arrives, Agents triage, Gate checks, Human decides[0m
+          [36m</desc>[39m
+          [36m<defs>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-red-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow-red"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+          [36m</defs>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M206,43 L262,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M441,43 L497,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M654,43 L710,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Ticket arrives"[39m
+            [33maria-pressed[39m=[32m"true"[39m
+            [33mclass[39m=[32m"flow-node selected"[39m
+            [33mdata-node[39m=[32m"a"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(16,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"95"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"95"[39m
+              [36m>[39m
+                [0mTicket arrives[0m
+              [36m</tspan>[39m
+            [36m</text>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Agents triage"[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-node"[39m
+            [33mdata-node[39m=[32m"b"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(262,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"89.5"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"89.5"[39m
+              [...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/flow.test.tsx:146:36
+    144|     node.focus();
+    145|     await user.keyboard("{Enter}");
+    146|     await user.click(within(screen.getByRole("dialog")).getByRole("but…
+       |                                    ^
+    147|     expect(screen.queryByRole("dialog")).toBeNull();
+    148|     expect(document.activeElement).toBe(node);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  src/flow.test.tsx > FlowDiagram > keeps a click inside the modal from closing it
+TestingLibraryElementError: Unable to find an accessible element with the role "dialog" and name "Ticket arrives"
+
+Here are the accessible roles:
+
+  group:
+
+  Name "Sample flow":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-controls"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Failure scenarios":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Failure scenarios"[39m
+    [33mclass[39m=[32m"flow-scenarios"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-h"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 913 94"[39m
+  [36m/>[39m
+
+  Name "Sample flow":
+  [36m<svg[39m
+    [33maria-label[39m=[32m"Sample flow"[39m
+    [33mclass[39m=[32m"flow-svg flow-v"[39m
+    [33mrole[39m=[32m"group"[39m
+    [33mviewBox[39m=[32m"0 0 230 388"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"flow-text"[39m
+    [33mopen[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Play":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Previous":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Next":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reset":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve your own refund":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(262,16)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(497,16)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(710,16)"[39m
+  [36m/>[39m
+
+  Name "Ticket arrives":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mclass[39m=[32m"flow-node selected"[39m
+    [33mdata-node[39m=[32m"a"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(16,16)"[39m
+  [36m/>[39m
+
+  Name "Agents triage":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Agents triage"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"b"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,114)"[39m
+  [36m/>[39m
+
+  Name "Gate checks":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Gate checks"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"c"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(32,212)"[39m
+  [36m/>[39m
+
+  Name "Human decides":
+  [36m<g[39m
+    [33maria-label[39m=[32m"Human decides"[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mclass[39m=[32m"flow-node"[39m
+    [33mdata-node[39m=[32m"d"[39m
+    [33mrole[39m=[32m"button"[39m
+    [33mtabindex[39m=[32m"0"[39m
+    [33mtransform[39m=[32m"translate(21,310)"[39m
+  [36m/>[39m
+
+  Name "Close":
+  [36m<button[39m
+    [33mclass[39m=[32m"flow-btn"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<p[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"flow-caption"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "Ticket arrives":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Ticket arrives"[39m
+    [33mclass[39m=[32m"flow-detail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Ticket arrives":
+  [36m<h4 />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-proj"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"flow-links"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  link:
+
+  Name "Code":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/src/a.py"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  Name "Docs":
+  [36m<a[39m
+    [33mhref[39m=[32m"https://example.test/blob/abc/docs/a.md"[39m
+    [33mrel[39m=[32m"noopener noreferrer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  [36m<ol[39m
+    [33mclass[39m=[32m"flow-list"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  Name "":
+  [36m<ul />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flow"[39m
+      [33mdata-flow[39m=[32m"sample"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-label[39m=[32m"Sample flow"[39m
+        [33mclass[39m=[32m"flow-controls"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPlay[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mdisabled[39m=[32m""[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mPrevious[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mNext[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m"flow-btn"[39m
+          [33mtype[39m=[32m"button"[39m
+        [36m>[39m
+          [0mReset[0m
+        [36m</button>[39m
+        [36m<div[39m
+          [33maria-label[39m=[32m"Failure scenarios"[39m
+          [33mclass[39m=[32m"flow-scenarios"[39m
+          [33mrole[39m=[32m"group"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-btn"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mApprove your own refund[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flow-stage"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-label[39m=[32m"Sample flow"[39m
+          [33mclass[39m=[32m"flow-svg flow-h"[39m
+          [33mrole[39m=[32m"group"[39m
+          [33mviewBox[39m=[32m"0 0 913 94"[39m
+        [36m>[39m
+          [36m<title>[39m
+            [0mSample flow[0m
+          [36m</title>[39m
+          [36m<desc>[39m
+            [0mFlow: Ticket arrives, Agents triage, Gate checks, Human decides[0m
+          [36m</desc>[39m
+          [36m<defs>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+            [36m<marker[39m
+              [33mid[39m=[32m"arrow-red-h"[39m
+              [33mmarkerHeight[39m=[32m"8"[39m
+              [33mmarkerWidth[39m=[32m"8"[39m
+              [33morient[39m=[32m"auto-start-reverse"[39m
+              [33mrefX[39m=[32m"9"[39m
+              [33mrefY[39m=[32m"5"[39m
+              [33mviewBox[39m=[32m"0 0 10 10"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33mclass[39m=[32m"flow-arrow-red"[39m
+                [33md[39m=[32m"M0,0 L10,5 L0,10 z"[39m
+              [36m/>[39m
+            [36m</marker>[39m
+          [36m</defs>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M206,43 L262,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M441,43 L497,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33mclass[39m=[32m"flow-edge"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M654,43 L710,43"[39m
+              [33mmarker-end[39m=[32m"url(#arrow-h)"[39m
+            [36m/>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Ticket arrives"[39m
+            [33maria-pressed[39m=[32m"true"[39m
+            [33mclass[39m=[32m"flow-node selected"[39m
+            [33mdata-node[39m=[32m"a"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(16,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 182,2 190,0 189,27 190,51 182,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"95"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"95"[39m
+              [36m>[39m
+                [0mTicket arrives[0m
+              [36m</tspan>[39m
+            [36m</text>[39m
+          [36m</g>[39m
+          [36m<g[39m
+            [33maria-label[39m=[32m"Agents triage"[39m
+            [33maria-pressed[39m=[32m"false"[39m
+            [33mclass[39m=[32m"flow-node"[39m
+            [33mdata-node[39m=[32m"b"[39m
+            [33mrole[39m=[32m"button"[39m
+            [33mtabindex[39m=[32m"0"[39m
+            [33mtransform[39m=[32m"translate(262,16)"[39m
+          [36m>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-shadow"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+              [33mtransform[39m=[32m"translate(6,6)"[39m
+            [36m/>[39m
+            [36m<polygon[39m
+              [33mclass[39m=[32m"flow-box"[39m
+              [33mpoints[39m=[32m"0,3 6,0 171,2 179,0 178,27 179,51 171,54 5,52 0,49"[39m
+            [36m/>[39m
+            [36m<text[39m
+              [33mclass[39m=[32m"flow-label"[39m
+              [33mtext-anchor[39m=[32m"middle"[39m
+              [33mx[39m=[32m"89.5"[39m
+              [33my[39m=[32m"35"[39m
+            [36m>[39m
+              [36m<tspan[39m
+                [33mdy[39m=[32m"0"[39m
+                [33mx[39m=[32m"89.5"[39m
+              [...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/flow.test.tsx:162:19
+    160|     await user.keyboard("{Enter}");
+    161|     await user.click(screen.getByText("A ticket is created."));
+    162|     expect(screen.getByRole("dialog", { name: "Ticket arrives" })).toB…
+       |                   ^
+    163|   });
+    164|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 13 passed (17)
+   Start at  15:06:40
+   Duration  8.23s (environment 38%, tests 35%, setup 14%, import 10%, transform 3%)
+

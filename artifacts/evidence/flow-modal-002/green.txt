@@ -1,0 +1,14 @@
+
+ RUN  v5.0.5 C:/estudo/Golpe/lab/projects/p08
+
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+
+ Test Files  2 passed (2)
+      Tests  38 passed (38)
+   Start at  15:07:26
+   Duration  3.67s (environment 43%, tests 41%, setup 7%, import 7%, transform 1%)
+
+exit=0

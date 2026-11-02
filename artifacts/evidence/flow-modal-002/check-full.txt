@@ -1,0 +1,51 @@
+
+ RUN  v5.0.5 C:/estudo/Golpe/lab/projects/p08
+
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+
+ Test Files  5 passed (5)
+      Tests  66 passed (66)
+   Start at  15:07:43
+   Duration  4.73s (environment 63%, tests 19%, setup 11%, import 6%, transform 1%)
+
+lint: exit 0
+typecheck: exit 0
+test: exit 0
+check-fast: OK
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/style.css              17.99 kB │ gzip: 4.32 kB
+dist/flow-text-Lh7b2TQk.js   0.46 kB │ gzip: 0.30 kB
+dist/layout.js               1.57 kB │ gzip: 0.80 kB
+dist/index.js               35.29 kB │ gzip: 9.54 kB
+
+[32m✓ built in 134ms[39m
+budget: PASS (9.6 KB gzip of 40 KB)
+
+Running 7 tests using 1 worker
+
+  ✓  1 e2e\gallery.spec.ts:10:5 › gallery breu 1000px: axe with contrast, no overflow, no console errors (1.6s)
+  ✓  2 e2e\gallery.spec.ts:10:5 › gallery breu 360px: axe with contrast, no overflow, no console errors (1.2s)
+  ✓  3 e2e\gallery.spec.ts:10:5 › gallery papel 1000px: axe with contrast, no overflow, no console errors (1.2s)
+  ✓  4 e2e\gallery.spec.ts:10:5 › gallery papel 360px: axe with contrast, no overflow, no console errors (1.2s)
+  ✓  5 e2e\gallery.spec.ts:32:1 › reduced motion stops the band and the focus-card shake (271ms)
+  ✓  6 e2e\gallery.spec.ts:40:1 › background mode 2d is chosen without WebGL2, and the page still renders (290ms)
+  ✓  7 e2e\gallery.spec.ts:52:1 › squint screenshot (DS-006 evidence, judged by the owner) (588ms)
+
+  7 passed (9.9s)
+pack: colagem-ui-0.4.5.tgz sha256=7a0ae3560b71d9dacc1da6761edd3bdaf79c674e73ebd2a9d75c6f06036eb79c commit=38c324db851a736bb99e757ae3867754988b5c42 (dirty tree)
+(node:25012) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+fast: exit 0
+build: exit 0
+budget: exit 0
+e2e: exit 0
+pack: exit 0
+check-full: PASS
+exit=0

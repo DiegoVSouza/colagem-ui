@@ -262,6 +262,9 @@ export function Modal({ title, open, onClose, closeLabel, children }: {
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const titleId = useId();
+  // The handler is read through a ref, so a host that passes a new function on every render does not re-run the focus logic.
+  const close = useRef(onClose);
+  close.current = onClose;
   useEffect(() => {
     if (!open) return;
     const previous = document.activeElement as HTMLElement | null;
@@ -269,7 +272,7 @@ export function Modal({ title, open, onClose, closeLabel, children }: {
     const focusable = () => [...node.querySelectorAll<HTMLElement>("button, [href], input, textarea, select, [tabindex]:not([tabindex='-1'])")].filter((e) => !e.hasAttribute("disabled"));
     (focusable()[0] ?? node).focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") { e.preventDefault(); onClose(); return; }
+      if (e.key === "Escape") { e.preventDefault(); close.current(); return; }
       if (e.key !== "Tab") return;
       const items = focusable();
       if (items.length === 0) { e.preventDefault(); return; }
@@ -279,10 +282,10 @@ export function Modal({ title, open, onClose, closeLabel, children }: {
     };
     node.addEventListener("keydown", onKey);
     return () => { node.removeEventListener("keydown", onKey); previous?.focus(); };
-  }, [open, onClose]);
+  }, [open]);
   if (!open) return null;
   return (
-    <div className="modal-veil">
+    <div className="modal-veil" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
       <div ref={ref} className="modal" role="dialog" aria-modal="true" aria-labelledby={titleId} tabIndex={-1}>
         <h2 id={titleId} className="card-title">{title}</h2>
         {children}

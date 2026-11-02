@@ -117,11 +117,49 @@ describe("FlowDiagram", () => {
     view();
     document.querySelector<SVGElement>('.flow-h [data-node="a"]')!.focus();
     await user.keyboard("{Enter}");
-    const detail = screen.getByRole("complementary", { name: "Ticket arrives" });
+    const detail = screen.getByRole("dialog", { name: "Ticket arrives" });
     expect(within(detail).getByText("A ticket is created.")).toBeTruthy();
     expect(within(detail).getByRole("link", { name: "Code" }).getAttribute("href")).toBe("https://example.test/blob/abc/src/a.py");
     await user.keyboard("{Escape}");
-    expect(screen.queryByRole("complementary")).toBeNull();
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+
+  it("shows the node detail as a modal in document.body, never below the diagram (FLOW-MODAL-001, 002, 004)", async () => {
+    const user = userEvent.setup();
+    const { container } = view();
+    document.querySelector<SVGElement>('.flow-h [data-node="a"]')!.focus();
+    await user.keyboard("{Enter}");
+    const dialog = screen.getByRole("dialog", { name: "Ticket arrives" });
+    expect(dialog.getAttribute("aria-modal")).toBe("true");
+    expect(container.contains(dialog)).toBe(false);
+    expect(document.body.contains(dialog)).toBe(true);
+    expect(container.querySelector(".flow-detail")).toBeNull();
+    expect(dialog.closest(".modal-veil")).not.toBeNull();
+  });
+
+  it("closes the node detail with the Close button and with a click on the veil, and gives focus back (FLOW-MODAL-003)", async () => {
+    const user = userEvent.setup();
+    view();
+    const node = document.querySelector<SVGElement>('.flow-h [data-node="a"]')!;
+    node.focus();
+    await user.keyboard("{Enter}");
+    await user.click(within(screen.getByRole("dialog")).getByRole("button", { name: "Close" }));
+    expect(screen.queryByRole("dialog")).toBeNull();
+    expect(document.activeElement).toBe(node);
+    await user.keyboard("{Enter}");
+    const veil = screen.getByRole("dialog").closest(".modal-veil") as HTMLElement;
+    await user.click(veil);
+    expect(screen.queryByRole("dialog")).toBeNull();
+    expect(document.activeElement).toBe(node);
+  });
+
+  it("keeps a click inside the modal from closing it", async () => {
+    const user = userEvent.setup();
+    view();
+    document.querySelector<SVGElement>('.flow-h [data-node="a"]')!.focus();
+    await user.keyboard("{Enter}");
+    await user.click(screen.getByText("A ticket is created."));
+    expect(screen.getByRole("dialog", { name: "Ticket arrives" })).toBeTruthy();
   });
 
   it("moves along edges with the arrow keys", async () => {
