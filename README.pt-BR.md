@@ -14,3 +14,5 @@
 Tokens e componentes React do design system do lab, `DESIGN_SYSTEM_COLAGEM_URBANA_NOITE.md` (níveis 0 e 1), mais o `FlowDiagram` e um conjunto de blocos de conteúdo. Consumido por P06 e P07 como tarball fixado.
 
 Consulte o README em inglês para o uso.
+
+Desde a 0.4.5, o `FlowDiagram` abre a explicação de um nó em um modal, desenhado em `document.body` pelo `Modal`: nenhum transform ou overflow de um ancestral o corta, e o diagrama não cresce mais para baixo. Fecha com o botão, com Escape e com um clique no fundo; o foco fica dentro e volta para o nó. O `Modal` também fecha com clique no fundo.

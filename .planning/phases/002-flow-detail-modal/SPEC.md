@@ -1,5 +1,7 @@
 # Phase 002: flow detail as a modal
 
+Status: done (0.4.5).
+
 Owner report (2026-11-02): in the "How it works" diagram, the explanation card that opens when a node is clicked appears below the diagram, where a visitor on a long page does not see it. It must open as a modal the visitor can see.
 
 ## Requirements

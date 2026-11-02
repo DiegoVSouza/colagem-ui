@@ -16,7 +16,7 @@ Tokens and React components of the lab's design system, `DESIGN_SYSTEM_COLAGEM_U
 ## Use
 
 ```powershell
-npm install file:vendor/colagem-ui-0.4.0.tgz
+npm install file:vendor/colagem-ui-0.4.5.tgz
 ```
 
 ```tsx
@@ -25,6 +25,8 @@ import "colagem-ui/tokens.css";
 import "colagem-ui/style.css";
 import { Card, StatusSeal, Button, FlowDiagram } from "colagem-ui";
 ```
+
+`FlowDiagram` opens a node's explanation as a modal (since 0.4.5). The detail is rendered through `Modal` into `document.body`, so no ancestor transform or overflow can clip it, and the diagram itself never grows below. It closes with the Close button, with Escape and with a click on the veil; focus stays inside while it is open and returns to the node. `Modal` reads its close handler through a ref, so a host that passes a new function every render does not reset focus, and it also closes on a veil click.
 
 Theme is `data-theme="breu|papel"`, accent is `data-accent="rosa|laranja|azul"` (default red). Add `colagem-ui/plate-fonts.css` only if you use `Plate`. Consumers never write a color: use tokens.
 
